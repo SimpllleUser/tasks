@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"net/http"
 )
@@ -41,7 +40,7 @@ func main() {
 	var user User
 	res, err := http.Get("https://jsonplaceholder.typicode.com/users/1")
 	if err != nil {
-		errors.New(err.Error())
+		fmt.Println(err.Error())
 	}
 	defer res.Body.Close()
 	fmt.Println("Response status:", res.Status)
