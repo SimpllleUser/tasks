@@ -33,17 +33,6 @@ func (ba *BankAccount) Deposit(amount float64) {
 
 func main() {
 
-	bankAccount := BankAccount{
-		Balance: float64(100.12),
-	}
-
-	bankAccount.Deposit(float64(12.0))
-
-	err := bankAccount.Withdraw(13.0)
-	if err != nil {
-		fmt.Println("Error:", err)
-	}
-
 	fmt.Printf("%.2f", bankAccount.Balance)
 
 }
